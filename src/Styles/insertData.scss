@@ -1,0 +1,90 @@
+.data-container {
+    background: rgba(76, 76, 76, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 700px;
+    height: auto;
+    display: flex;
+    color: var(--txt-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input[type="file"] {
+        display: none;
+    }
+    .btn-upload{
+        position: relative;
+        background: #444;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        letter-spacing: 0.1em;
+        padding: 10px 30px;
+        margin: 20px;
+        transition: 0.5s;
+        &:hover{
+            letter-spacing: 0.25em;
+            background: var(--clr);
+            color: var(--clr);
+            box-shadow: 0 0 35px var(--clr);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: #27282c;
+        }
+        span{
+            position: relative;
+            z-index: 1;
+        }
+        i{
+            position: absolute;
+            inset: 0;
+            display: block;
+            &::before{
+                content: '';
+                position: absolute;
+                top: -18px;
+                left: 90%;
+                width: 15px;
+                height: 10px;
+                border: 2px solid var(--clr);
+                background: #27282c;
+                transform: translateX(-50%);
+                transition: 0.5s;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -18px;
+                left: 10%;
+                width: 15px;
+                height: 10px;
+                border: 2px solid var(--clr);
+                background: #27282c;
+                transform: translateX(-50%);
+                transition: 0.5s;
+            }
+        }
+        &:hover i::before{
+            width: 20px;
+            left: 10%;
+        }
+        &:hover i::after{
+            width: 20px;
+            left: 90%;
+        }
+    }
+}
+
+h1{
+    text-align: center;
+}
+
+.serieData{
+    color: white;
+}

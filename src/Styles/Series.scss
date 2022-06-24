@@ -1,0 +1,121 @@
+.cardSerie{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-bottom: 50px;
+    .left{
+        width: 480px;
+        height: 653px;
+        margin-top: -20px;
+        background-color: #cc3843;
+        border-radius: 23px;
+        display: flex;
+        margin-left: 10%;
+        align-items: center;
+        img{
+            height: 300px;
+            opacity: 0.5;
+            transform: rotate(-90deg) scale(1.2);
+            margin-left: -90px;
+        }
+    }
+    .right{
+        width: 954px;
+        height: 579px;
+        background: #0c1f2c;
+        position: absolute;
+        left: 5%;
+        transform: translateX(50%);
+        border-radius: 23px;
+        img{
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .serieInfo{
+            width: 600px;
+            height: 400px;
+            margin: 50px 0 0 235px;
+            color: white;
+            h1{
+                font-weight: 800;
+                line-height: 40px;
+                margin-bottom: 15px;
+            }
+            h2{
+                font-weight: 300;
+                font-size: 32px;
+                letter-spacing: 1.6px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .description{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                .desc{
+                    width: 70%;
+                    p{
+                        font-weight: 500;
+                        font-size: 15px;
+                    }
+                }
+                .calificacion{
+                    text-align: center;
+                    width: 30%;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 50px;
+                    h4{
+                        margin-top: 20px;
+                        margin-bottom: 30px;
+                    }
+                    h3{
+                        width: 80px;
+                        height: 80px;
+                        font-weight: 700;
+                        line-height: 80px;
+                        font-size: 16px;
+                        margin-left: 50px;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                            border: 2px solid orangered;
+                            border-top-color: transparent;
+                            transform: rotate(-45deg) translate(-50%, -50%);
+                        }
+                    }
+                    .linkTo{
+                        height: 48px;
+                        background-color: #cc3843;
+                        border-radius: 90px;
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 35px;
+                        padding: 10px 24px;
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 976px) {
+    .cardSerie{
+        transform: rotate(90deg) scale(0.7) translate(calc(50% - 25vh), 50%);
+        .left{
+            margin-top: 0;
+            margin-left: 20%;
+        }
+        .right{
+            transform: rotate(-90deg)
+        }
+    }
+}

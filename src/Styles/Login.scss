@@ -1,0 +1,235 @@
+.login-container{
+    width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    box-shadow: 2px 10px 8px #d3c3fb;
+    margin-top: 60px;
+    .main-box{
+        width: 100%;
+        height: 530px;
+        position: relative;
+        display: flex;
+        .logo{
+            position: absolute;
+            color: #fff;
+            top: 15px;
+            left: 40px;
+            font-size: 10px;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            // z-index: 999;
+            &.color{
+                color: #512DA8;
+            }
+            .logo-text{
+                margin-top: 5px;
+                letter-spacing: 0.09em;
+            }
+        }
+        .left-side{
+            flex: 1.7;
+            height: 100%;
+            background-image: linear-gradient(to top, #673AB7, #512DA8);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-weight: bold;
+                letter-spacing: 0.05em;
+            }
+            p{
+                font-size: 12px;
+                font-weight: 600;
+                margin-top: 15px;
+                letter-spacing: 0.09em;
+            }
+            button{
+                width: 200px;
+                height: 45px;
+                border-radius: 32px;
+                outline: none;
+                color: #fff;
+                background-color: transparent;
+                margin-top: 15px;
+                font-weight: 600;
+                font-size: 12px;
+                border: 1px solid #fff;
+                letter-spacing: 0.09em;
+            }
+        }
+        .right-side{
+            flex: 2.3;
+            height: 100%;
+            background-image: linear-gradient(#ebebfb, #d3c3fb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .rightSide-img{
+                width: 90%;
+                height: 90%;
+            }
+        }
+    }
+
+    .form-section{
+        flex: 2.7;
+        background-color: #fff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        text-align: center;
+        overflow: hidden;
+        h1{
+            color: #673AB7;
+            font-weight: bold;
+            letter-spacing: 00.05em;
+        }
+        .icons{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            .icon{
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0px 10px;
+                color: #fff;
+                background-color: rgb(229, 229, 229);
+            }
+        }
+        p{
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.09em;
+            margin-top: 15px;
+            color: #c9c9ca;
+        }
+        form{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .custom-input{
+                width: 100%;
+                background-color: #ebebfb;
+                height: 45px;
+                border-radius: 24px;
+                display: flex;
+                align-items: center;
+                margin-top: 7px;
+                overflow: hidden;
+                .iconForm{
+                    margin-left: 15px;
+                    margin-top: -4px;
+                }
+                input{
+                    outline: none;
+                    border: hidden;
+                    background-color: transparent;
+                    margin-left: 10px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: #bfbfc0;
+                    &::placeholder{
+                        color: #bfbfc0;
+                        letter-spacing: 0.09em;
+                    }
+                }
+            }
+            .forget-label{
+                background-color: #fff;
+                color: #bfbfc0;
+                box-shadow: 0px 2px 4px #e4e4e4;
+                font-size: 12px;
+                font-weight: 600;
+                margin-top: 10px;
+                width: auto;
+                letter-spacing: 0.09em;
+                cursor: pointer;
+            }
+            .register-button{
+                width: 200px;
+                height: 45px;
+                border-radius: 32px;
+                outline: none;
+                color: #fff;
+                background-image: linear-gradient(to right, #673AB7, #512DA8);
+                border: hidden;
+                font-weight: 600;
+                font-size: 12px;
+                letter-spacing: 0.09em;
+            }
+        }
+    }
+
+    .form-right{
+        flex: 1.3;
+        height: 100%;
+        background-image: linear-gradient(to top, #673AB7, #512DA8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+        p{
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 15px;
+            letter-spacing: 00.09em;
+        }
+        .img{
+            width: 200px;
+            height: 170px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 540px){
+    .login-container{
+        width: 100%;
+        margin: 0;
+        .main-box{
+            height: 100vh;
+            .left-side{
+                width: 100%;
+            }
+            .right-side{
+                display: none;
+            }
+            .form-section{
+                width: 100%;
+                padding: 10px;
+                form{
+                    width: 90%;
+                }
+            }
+            .form-right{
+                display: none;
+            }
+        }
+    }
+}

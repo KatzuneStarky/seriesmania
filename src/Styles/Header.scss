@@ -1,0 +1,217 @@
+.contanier {
+    width: 1280px;
+    min-width: 1280px;
+    margin: 0 auto;
+
+    .wrapper {
+        padding: 0 48px;
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+
+            p {
+                font-size: 0.75rem;
+                letter-spacing: 0.3rem;
+                text-transform: uppercase;
+                font-weight: 300;
+            }
+
+            h5 {
+                margin-top: 260px;
+                font-size: 1.5rem;
+                font-weight: 600;
+                padding-right: 360px;
+            }
+        }
+    }
+}
+
+header {
+    height: 100px;
+
+    .inner-header {
+        position: relative;
+        z-index: 10;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo a {
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu {
+            button {
+                border: none;
+                background: none;
+                outline: none;
+                cursor: pointer;
+                font-size: 0.8rem;
+                color: white;
+            }
+        }
+    }
+
+    .hamburger-menu {
+        display: none;
+        z-index: 9;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+
+        .menu-secondary-background-color {
+            background-color: black;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .menu-layer {
+            position: relative;
+            background: #EC7C19;
+            height: 100%;
+            overflow: hidden;
+
+            .menu-city-background {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                animation: cameraPan 30s infinite;
+            }
+
+            .wrapper {
+                position: relative;
+
+                .menu-links {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    top: 200px;
+                }
+
+                nav {
+                    display: block;
+
+                    ul {
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            list-style: none;
+                            font-size: 6rem;
+                            font-weight: 700;
+                            cursor: pointer;
+                            height: 135px;
+                            overflow: hidden;
+                            position: relative;
+                            width: 700px;
+
+                            a {
+                                position: absolute;
+                                color: #fff;
+                                text-decoration: none;
+                                transition: color .3s;
+
+                                &:hover {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .info {
+                    color: #000;
+                    width: 350px;
+                    background: rgba(255, 255, 255, 0.25);
+                    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                    backdrop-filter: blur(4px);
+                    -webkit-backdrop-filter: blur(4px);
+                    border-radius: 10px;
+                    border: 1px solid rgba(255, 255, 255, 0.18);
+                    padding: 30px;
+
+                    h3 {
+                        font-size: 1.2rem;
+                        margin: 8px auto;
+                    }
+
+                    p {
+                        margin: 0 auto;
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .locations {
+            position: absolute;
+            bottom: -80px;
+            color: #fff;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+
+            span {
+                &:first-child {
+                    margin-left: 64px;
+                }
+
+                cursor: pointer;
+                margin: 0px 32px;
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    background: black;
+                    padding: 8px 24px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes cameraPan {
+    0%{
+        background-position: 0% 0%;
+    }
+
+    25%{
+        background-position: 40% 10%;
+    }
+
+    50%{
+        background-position: 0% 10%;
+    }
+
+    75%{
+        background-position: 10% 40%;
+    }
+
+    100%{
+        background-position: 0% 0%;
+    }
+}
