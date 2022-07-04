@@ -25,7 +25,7 @@ const RoutesPage = () => {
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path='/register' element={<Register />} />
                 <Route exact path='/forgotpassword' element={<ForgotPassword />} />
-                <Route exact path='//resetPassword:resetToken' element={<ResetPassword />} />
+                <Route exact path='/resetPassword:resetToken' element={<ResetPassword />} />
                 <Route exact path='/home' element={<HomePage />} />
                 <Route path='/insertData' element={<InserData />} />
                 <Route exact path='/seriedata' element={<SeriesAllData />} />

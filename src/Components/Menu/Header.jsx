@@ -48,7 +48,7 @@ const Header = () => {
                 <div className="wrapper">
                     <div className="inner-header">
                         <div className="logo">
-                            <Link to={"/"}>SeriesMania</Link>
+                            <Link to={"/home"}>SeriesMania</Link>
                         </div>
                         <div className="menu">
                             <button disabled={disabled} onClick={handleMenu}>Menu</button>

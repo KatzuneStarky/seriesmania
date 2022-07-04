@@ -2,7 +2,17 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-import Slider from '../Components/Slider'
+import '../Styles/ImageSlider.scss'
+import SliderData from '../SlideData'
+import ImageSlider from '../Components/ImageSlider'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 
 const HomePage = () => {
     let navigate = useNavigate();
@@ -10,7 +20,7 @@ const HomePage = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch("http://localhost:9000/api/series")
+        fetch("https://series-mania-api.herokuapp.com/api/series")
             .then((res) => res.json())
             .then((data) => {
                 setData(data)
@@ -22,16 +32,36 @@ const HomePage = () => {
         localStorage.removeItem("authToken")
         navigate("/")
     }
+
     return (
         <>
-            <button onClick={logoutHandler}>Cerrar Sesion</button>
+            {/* <button onClick={logoutHandler}>Cerrar Sesion</button> */}
             <div>
-                <Slider infinite timer={5000}>
-                    <img src={"https://images8.alphacoders.com/442/442432.jpg"} alt="" />
-                    <img src={"https://images5.alphacoders.com/312/312856.png"} alt="" />
-                    <img src={"https://images8.alphacoders.com/442/442432.jpg"} alt="" />
-                    <img src={"https://images5.alphacoders.com/312/312856.png"} alt="" />
-                </Slider>
+                <Swiper
+                    cssMode={true}
+                    navigation={true}
+                    pagination={true}
+                    mousewheel={true}
+                    keyboard={true}
+                    modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                    className="swiper-container"
+                >
+                    <div className="swiper-wrapper">
+                        {
+                            SliderData.map((data, index) => (
+                                <SwiperSlide key={index} style={{ backgroundColor: `${data.color}` }}>
+                                    <ImageSlider
+                                        color={data.color}
+                                        image={data.image}
+                                        number={data.number}
+                                        desc={data.desc}
+                                        nSerie={data.nSerie}
+                                    />
+                                </SwiperSlide>
+                            ))
+                        }
+                    </div>
+                </Swiper>
                 {loading && <p>Load</p>}
                 {
                     !loading && data.map((serie) => (
