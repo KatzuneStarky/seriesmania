@@ -6,8 +6,8 @@ import {
     AiOutlineArrowRight
 } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
-import { BsTelegram, BsPhone, BsArrowRightSquare } from "react-icons/bs";
-import { BiRightArrow, BiMap, BiWorld } from "react-icons/bi";
+import { BsTelegram, BsPhone } from "react-icons/bs";
+import { BiMap, BiWorld } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "../Styles/Footer.scss";
 

@@ -1,6 +1,6 @@
 import './App.scss';
 import RoutesPage from './Components/RoutesPage';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { SkeletonTheme } from 'react-loading-skeleton';
 
